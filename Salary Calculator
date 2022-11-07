@@ -1,0 +1,65 @@
+print("Herzlich Willkommen in Henning`s Gehaltsrechner! ")
+print(" ")
+
+hourlywage = input("Bitte Stundenlohn eintragen: ")
+print(" ")
+hour = input("Gearbeitete stunden eingeben: ")
+print(" ")
+
+hourlywage = float(hourlywage)
+hour = float(hour)
+
+hours = float(hour) * float(hourlywage)
+
+print("Wenn dein Stundenlohn " + str(hourlywage) + "€ beträgt und du " + str(hour) + " Stunden Arbeitest dann verdienst du " + str(hours) + "€.")
+print(" ")
+choice = input("Möchtest du deinen Verdienst für mehrere Tage wissen? (J/N) ")
+print(" ")
+
+try:
+    int_choice = ord(choice)
+except Exception as e:
+    print('Error:', e)
+
+
+if ord(choice) == 74:
+    days = input("Gebe die Anzahl der Tage ein: ")
+    print(" ")
+
+elif ord(choice) == 78:
+    input("Auf Wiedersehen")
+    exit()
+
+else:
+    input("bitte gültige Antwort geben")
+
+
+weekdays = float(hour) * float(hourlywage) * int(days)
+
+print("Bei " + str(days) + " Arbeitstagen und einem Stundenlohn von " + str(hourlywage) + "€ beträgt dein Brutto lohn " + str(weekdays) + "€.")
+print(" ")
+my_choice = input("Möchtest du dein Aktuelles Jahresgehalt wissen? (J/N): ")
+print(" ")
+
+try:
+    int_my_choice = ord(my_choice)
+except Exception as e:
+    print('Error:', e)
+
+if ord(my_choice) == 74:
+    year = float(hour) * float(hourlywage) * 365
+    print("Bei einem Stundenlohn von " + str(hourlywage) + "€ beträgt dein Brutto Jahresgehalt " + str(year) + "€.")
+    print(" ")
+
+elif ord(my_choice) == 78:
+    input("Auf Wiedersehen")
+    exit()
+
+else:
+    input("bitte gültige Antwort geben")
+
+print("Auf Wiedersehen")
+print(" ")
+
+input("Drücke eine Beliebige taste zum Beenden")
+exit()
